@@ -1,0 +1,80 @@
+body {
+    /* Typography Declarations */
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+.masthead{
+  color: white;
+  background-color: black;
+  text-align: left;
+  margin-top: 1em;
+}
+
+.masthead-heading{
+  color: white;
+  font-size: 3em;
+  font-family: 'Changa One', cursive;
+  letter-spacing: -0.02em;
+}
+
+
+
+.paragraph {
+  text-align: center;
+  padding: 12em 0;
+  background-image: url("https://download.unsplash.com/photo-1416424312427-baefa7707d85");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+
+.footer{
+  color: white;
+  background-color: black;
+  background-size: cover;
+  text-align: center;
+  padding: 4em;
+}
+
+
+
+.paragraph > p,
+.footer > p {
+    /* Typography Declarations */
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+.paragraph > h2 {
+    /* Typography Declarations */
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #5F758C;
+}
+
+
+a:link {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 2em 0 1em 0;
+  color: #CC0000;
+}
+
+a:visited {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 2em 0 1em 0;
+  color: #CC0000;
+}
+

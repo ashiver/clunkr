@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLUNKr | Car Diagnostic App</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" type="image/x-icon" href="a.ico">
+    <meta name="keywords" content="">
+  </head>
+<header class="masthead">
+  <h1 class="masthead-heading">
+    CLUNKr
+  </h1>
+</header>
+<section class="paragraph">
+  {% block content %}
+  {% endblock %}
+</section>
+<footer class="footer">
+    <h2>Car making a strange sound? Not sure why? Hold your device near the source, press record, and let us have a listen...        </h2>
+    <br>
+    <p>Written by <a href="http://www.twitter.com/anthonyshiver">@anthonyshiver</a>.
+    </p>
+</footer>
+</html>
