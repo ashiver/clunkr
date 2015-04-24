@@ -78,3 +78,13 @@ a:visited {
   color: #CC0000;
 }
 
+.container {
+  width: 10em;
+  left-margin: auto;
+  right-margin: auto;
+  background-color: black;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white; 
+}
