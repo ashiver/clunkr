@@ -25,7 +25,7 @@ def fingerprint():
 
 	# Fingerprint all the mp3's in the directory we give it
 	djv.fingerprint_directory("mp3", [".mp3"])
-    return print "Finished fingerprinting files."
+    print "Finished fingerprinting files."
 
 
 if __name__ == "__main__":
