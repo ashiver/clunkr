@@ -1,6 +1,6 @@
 (function(window){
 
-  var WORKER_PATH = '{{ url_for('static', filename='recorderWorker.js') }}';
+  var WORKER_PATH = 'recorderWorker.js';
 
   var Recorder = function(stream){
     var context, audioInput, processor, gain, gainFunction, processorFunction;
