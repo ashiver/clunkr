@@ -21,7 +21,7 @@ def upload():
     recognizer = FileRecognizer(djv)
     match = recognizer.recognize_file(file) # recognizer returns filename
     flash("Uploading and looking for a match.", "info")
-    os.popen("rm -f ~/recordings") # deletes file after match is made
+    os.popen("rm -f ~/root/recordings") # deletes file after match is made
     return render_template("result.html",
                           match=match
                           )
