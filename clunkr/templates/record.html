@@ -34,6 +34,7 @@
     __log('Stopped recording.');
     // create MP3 download link using audio data blob
     createDownloadLink();
+    post();
   }
   function createDownloadLink() {
     recorder.exportMP3(function(blob, mp3Name) {
