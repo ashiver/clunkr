@@ -1,4 +1,4 @@
-importScripts('{{ url_for('static', filename='libmp3lame.min.js') }}');
+importScripts('libmp3lame.min.js');
 
 var recLength = 0,
   recBuffer = [],
