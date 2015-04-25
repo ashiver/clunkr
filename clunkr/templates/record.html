@@ -4,7 +4,7 @@
 
   
   <button onclick="startRecording(this);">record</button>
-  <button method="post" onclick="stopRecording(this);" disabled>stop</button>
+  <button type="submit" onclick="stopRecording(this);" disabled>stop</button>
 
   <h2>Recordings</h2>
   <ul id="recordingslist"></ul>
@@ -34,7 +34,6 @@
     __log('Stopped recording.');
     // create MP3 download link using audio data blob
     createDownloadLink();
-    post();
   }
   function createDownloadLink() {
     recorder.exportMP3(function(blob, mp3Name) {

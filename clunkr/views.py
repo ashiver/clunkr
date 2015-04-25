@@ -24,7 +24,7 @@ def upload():
     with open("~/root/recordings" + file_name) as f: # opens file as f
         match = recognizer.recognize_file(f) # recognizer returns filename
     flash("Uploading and looking for a match.", "info")
-    os.popen("rm -f ~/root/recordings") # deletes file after match is made
+    #os.popen("rm -f ~/root/recordings")  deletes files after match is made
     return render_template("result.html",
                           match=match
                           )
