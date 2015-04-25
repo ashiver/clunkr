@@ -24,7 +24,7 @@ def fingerprint():
         config = json.load(f)
 
 	# Fingerprint all the mp3's in the directory we give it
-	djv.fingerprint_directory("mp3", [".mp3"])
+	djv.fingerprint_directory("~/root/mp3", [".mp3"])
     print "Finished fingerprinting files."
 
 
