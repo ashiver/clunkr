@@ -18,9 +18,11 @@ def record():
 def upload():
     subprocess.call("php ~/root/clunkr/static/upload.php") # runs the php upload script
     directory_list = os.listdir("~/root/recordings") # grabs the files from the recording directory
-    file = directory_list.pop # pulls the most recent recording from recordings
+    file_name = directory_list.pop # pulls filename of the most recent recording from recordings
     recognizer = FileRecognizer(djv)
-    match = recognizer.recognize_file(file) # recognizer returns filename
+    match = ""
+    with open("~/root/recordings" + file_name) as f: # opens file as f
+        match = recognizer.recognize_file(f) # recognizer returns filename
     flash("Uploading and looking for a match.", "info")
     os.popen("rm -f ~/root/recordings") # deletes file after match is made
     return render_template("result.html",
