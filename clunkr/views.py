@@ -1,7 +1,9 @@
+import os
 from flask import render_template, request, redirect, url_for, flash
 from clunkr import app, djv
 from dejavu.recognize import FileRecognizer
 from werkzeug import secure_filename
+import subprocess
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -13,12 +15,10 @@ def record():
 
 
 @app.route("/", methods=['POST'])
-@app.route("/static", methods=['GET', 'POST'])
 def upload():
-    file = request.files['file'] # sample must be mp3
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename)) # for debugging purposes, to see whether file is uploaded or not
+    subprocess.call("php ~/root/clunkr/static/upload.php") # runs the php upload script
+    directory_list = os.listdir("~/root/recordings") # grabs the files from the recording directory
+    file = directory_list.pop # pulls the most recent recording from recordings
     recognizer = FileRecognizer(djv)
     match = recognizer.recognize_file(file) # recognizer returns filename
     flash("Uploading and looking for a match.", "info")

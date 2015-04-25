@@ -62,7 +62,6 @@
         fd.append('fname', mp3Name);
         fd.append('data', event.target.result);
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/static/upload.php', true);
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 __log("MP3 Uploaded.");
