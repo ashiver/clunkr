@@ -13,6 +13,7 @@ def record():
 
 
 @app.route("/", methods=['POST'])
+@app.route("/static", methods=['GET', 'POST'])
 def upload():
     file = request.files['file'] # sample must be mp3
     if file and allowed_file(file.filename):
